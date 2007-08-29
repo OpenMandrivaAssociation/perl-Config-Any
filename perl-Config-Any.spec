@@ -2,7 +2,7 @@
 %define name	perl-%{module}
 %define	modprefix Config
 
-%define version	0.07
+%define version	0.08
 %define	rel	1
 %define release	%mkrel %{rel}
 
@@ -14,8 +14,7 @@ License:	Artistic/GPL
 Group:		Development/Perl
 URL:		http://search.cpan.org/dist/%{module}/
 Source:     http://www.cpan.org/modules/by-module/%{modprefix}/%{module}-%{version}.tar.bz2
-BuildRequires:  perl(Module::Build)
-BuildRequires:	perl(Module::Pluggable) >= 3.01
+BuildRequires:  perl(Module::Pluggable) >= 3.01
 BuildRequires:  perl(Test::Exception)
 BuildRequires:  perl(Test::More)
 BuildRequires:  perl-version
@@ -33,15 +32,15 @@ files, and even Perl code.
 %setup -q -n %{module}-%{version}
 
 %build
-%__perl Build.PL installdirs=vendor
-./Build
+%{__perl} Makefile.PL INSTALLDIRS=vendor
+%make
 
 %check
-./Build test
+%{__make} test
 
 %install
 %{__rm} -rf %{buildroot}
-./Build install destdir=%{buildroot}
+%makeinstall_std
 
 %files
 %defattr(-,root,root)
