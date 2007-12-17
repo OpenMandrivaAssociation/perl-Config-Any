@@ -19,7 +19,6 @@ BuildRequires:  perl(Test::Exception)
 BuildRequires:  perl(Test::More)
 BuildRequires:  perl-version
 BuildArch:	    noarch
-Buildroot:	    %{_tmppath}/%{name}-%{version}
 
 %description
 Config::Any provides a facility for Perl applications and libraries to
