@@ -3,8 +3,7 @@
 %define	modprefix Config
 
 %define version	0.15
-%define	rel	1
-%define release	%mkrel %{rel}
+%define release	%mkrel 1
 
 Summary:	Load configuration from different file formats, transparently
 Name:		%{name}
@@ -17,6 +16,7 @@ Source:     http://www.cpan.org/modules/by-module/%{modprefix}/%{module}-%{versi
 BuildRequires:  perl(Module::Pluggable) >= 3.01
 BuildRequires:  perl(Test::Exception)
 BuildRequires:  perl(Test::More)
+BuildRequires:  perl(Config::General)
 BuildRequires:  perl-version
 BuildArch:	    noarch
 Buildroot:	    %{_tmppath}/%{name}-%{version}
