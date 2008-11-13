@@ -19,6 +19,7 @@ BuildRequires:  perl(Test::More)
 BuildRequires:  perl(Config::General)
 BuildRequires:  perl(Config::Tiny)
 BuildRequires:  perl(JSON)
+BuildRequires:  perl(YAML)
 BuildRequires:  perl(XML::Simple)
 BuildRequires:  perl-version
 BuildArch:	    noarch
