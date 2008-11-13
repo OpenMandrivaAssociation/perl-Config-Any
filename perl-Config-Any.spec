@@ -17,6 +17,7 @@ BuildRequires:  perl(Module::Pluggable) >= 3.01
 BuildRequires:  perl(Test::Exception)
 BuildRequires:  perl(Test::More)
 BuildRequires:  perl(Config::General)
+BuildRequires:  perl(Config::Tiny)
 BuildRequires:  perl-version
 BuildArch:	    noarch
 Buildroot:	    %{_tmppath}/%{name}-%{version}
