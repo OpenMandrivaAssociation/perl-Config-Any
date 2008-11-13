@@ -18,7 +18,7 @@ BuildRequires:  perl(Test::Exception)
 BuildRequires:  perl(Test::More)
 BuildRequires:  perl(Config::General)
 BuildRequires:  perl(Config::Tiny)
-BuildRequires:  perl(Config::JSON)
+BuildRequires:  perl(JSON)
 BuildRequires:  perl-version
 BuildArch:	    noarch
 Buildroot:	    %{_tmppath}/%{name}-%{version}
