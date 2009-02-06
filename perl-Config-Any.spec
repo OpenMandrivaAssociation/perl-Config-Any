@@ -2,7 +2,7 @@
 %define name	perl-%{module}
 %define	modprefix Config
 
-%define version	0.16
+%define version	0.17
 %define release	%mkrel 1
 
 Summary:	Load configuration from different file formats, transparently
