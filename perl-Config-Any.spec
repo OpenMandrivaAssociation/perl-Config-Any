@@ -1,18 +1,16 @@
-%define module	Config-Any
-%define name	perl-%{module}
-%define	modprefix Config
+%define upstream_name	 Config-Any
+%define upstream_version 0.17
 
-%define version	0.17
-%define release	%mkrel 1
+Name:       perl-%{upstream_name}
+Version:    %perl_convert_version %{upstream_version}
+Release:    %mkrel 1
 
 Summary:	Load configuration from different file formats, transparently
-Name:		%{name}
-Version:	%{version}
-Release:	%{release}
 License:	Artistic/GPL
 Group:		Development/Perl
-URL:		http://search.cpan.org/dist/%{module}/
-Source:     http://www.cpan.org/modules/by-module/%{modprefix}/%{module}-%{version}.tar.bz2
+URL:		http://search.cpan.org/dist/%{upstream_name}/
+Source0:    http://www.cpan.org/modules/by-module/Config/%{upstream_name}-%{upstream_version}.tar.bz2
+
 BuildRequires:  perl(Module::Pluggable) >= 3.01
 BuildRequires:  perl(Test::Exception)
 BuildRequires:  perl(Test::More)
@@ -23,7 +21,7 @@ BuildRequires:  perl(YAML)
 BuildRequires:  perl(XML::Simple)
 BuildRequires:  perl-version
 BuildArch:	    noarch
-Buildroot:	    %{_tmppath}/%{name}-%{version}
+Buildroot:	    %{_tmppath}/%{name}-%{version}-%{release}
 
 %description
 Config::Any provides a facility for Perl applications and libraries to
@@ -33,7 +31,7 @@ files, and even Perl code.
 
 
 %prep
-%setup -q -n %{module}-%{version}
+%setup -q -n %{upstream_name}-%{upstream_version}
 
 %build
 %{__perl} Makefile.PL INSTALLDIRS=vendor
@@ -46,13 +44,11 @@ files, and even Perl code.
 %{__rm} -rf %{buildroot}
 %makeinstall_std
 
+%clean
+rm -rf %{buildroot}
+
 %files
 %defattr(-,root,root)
 %doc Changes README
 %{_mandir}/*/*
-%{perl_vendorlib}/%{modprefix}
-
-%clean
-rm -rf %{buildroot}
-
-
+%{perl_vendorlib}/Config
