@@ -1,4 +1,5 @@
 removed_sources:
   Config-Any-0.22.tar.gz: dddc4fdec69965a649be1a62a112d92e68200fec
-sources:
   Config-Any-0.23.tar.gz: ff131a6ec70a274709698894a29ec10fa8298650
+sources:
+  Config-Any-0.24.tar.gz: ea697320dbffb708282d77c233932965ba06488f

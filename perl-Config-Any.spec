@@ -1,14 +1,14 @@
 %define upstream_name	 Config-Any
-%define upstream_version 0.23
+%define upstream_version 0.24
 Name:		perl-%{upstream_name}
-Version:	%perl_convert_version 0.23
+Version:	%perl_convert_version %{upstream_version}
 Release:	1
 
 Summary:	Load configuration from different file formats, transparently
 License:	Artistic/GPL
 Group:		Development/Perl
 URL:		http://search.cpan.org/dist/%{upstream_name}/
-Source0:	http://www.cpan.org/modules/by-module/Config/Config-Any-0.23.tar.gz
+Source0:	http://www.cpan.org/modules/by-module/Config/Config-Any-%{upstream_version}.tar.gz
 
 BuildRequires:	perl-devel
 BuildRequires:	perl(Module::Pluggable) >= 3.01
@@ -130,5 +130,6 @@ make test
 
 * Sat Aug 26 2006 Scott Karns <scottk@mandriva.org> 0.04-1mdv2007.0
 - Initial Mandriva RPM
+
 
 
