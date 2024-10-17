@@ -7,7 +7,7 @@ Release:	3
 Summary:	Load configuration from different file formats, transparently
 License:	Artistic/GPL
 Group:		Development/Perl
-URL:		http://search.cpan.org/dist/%{upstream_name}/
+URL:		https://search.cpan.org/dist/%{upstream_name}/
 Source0:	http://www.cpan.org/modules/by-module/Config/Config-Any-%{upstream_version}.tar.gz
 
 BuildRequires:	perl-devel
