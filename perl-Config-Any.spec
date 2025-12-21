@@ -10,6 +10,7 @@ Group:		Development/Perl
 URL:		https://search.cpan.org/dist/%{upstream_name}/
 Source0:	http://www.cpan.org/modules/by-module/Config/Config-Any-%{upstream_version}.tar.gz
 
+BuildRequires:	make
 BuildRequires:	perl-devel
 BuildRequires:	perl(Module::Pluggable) >= 3.01
 BuildRequires:	perl(Test::Exception)
