@@ -1,14 +1,14 @@
 %define upstream_name	 Config-Any
-%define upstream_version 0.24
+%define upstream_version 0.33
 Name:		perl-%{upstream_name}
-Version:	%perl_convert_version %{upstream_version}
-Release:	3
+Version:	%{upstream_version}
+Release:	1
 
 Summary:	Load configuration from different file formats, transparently
 License:	Artistic/GPL
 Group:		Development/Perl
-URL:		https://search.cpan.org/dist/%{upstream_name}/
-Source0:	http://www.cpan.org/modules/by-module/Config/Config-Any-%{upstream_version}.tar.gz
+URL:		https://github.com/p5sagit/Config-Any
+Source0:	https://cpan.metacpan.org/authors/id/H/HA/HAARG/Config-Any-%{upstream_version}.tar.gz
 
 BuildRequires:	make
 BuildRequires:	perl-devel
