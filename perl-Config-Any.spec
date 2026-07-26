@@ -1,14 +1,13 @@
 %define upstream_name	 Config-Any
-%define upstream_version 0.33
 Name:		perl-%{upstream_name}
-Version:	%{upstream_version}
-Release:	1
+Version:	0.33
+Release:	2
 
 Summary:	Load configuration from different file formats, transparently
 License:	Artistic/GPL
 Group:		Development/Perl
 URL:		https://github.com/p5sagit/Config-Any
-Source0:	https://cpan.metacpan.org/authors/id/H/HA/HAARG/Config-Any-%{upstream_version}.tar.gz
+Source0:	https://cpan.metacpan.org/authors/id/H/HA/HAARG/Config-Any-%{version}.tar.gz
 
 BuildRequires:	make
 BuildRequires:	perl-devel
@@ -31,7 +30,7 @@ supports XML, YAML, JSON, Apache-style configuration, Windows INI
 files, and even Perl code.
 
 %prep
-%setup -q -n %{upstream_name}-%{upstream_version}
+%setup -q -n %{upstream_name}-%{version}
 
 %build
 perl Makefile.PL INSTALLDIRS=vendor
@@ -76,9 +75,7 @@ make test
 
 * Sat Aug 01 2009 Jérôme Quelin <jquelin@mandriva.org> 0.170.0-1mdv2010.0
 + Revision: 406318
-- rebuild using %%perl_convert_version
-
-* Fri Feb 06 2009 Guillaume Rousse <guillomovitch@mandriva.org> 0.17-1mdv2009.1
+- rebuild using %0.33 Fri Feb 06 2009 Guillaume Rousse <guillomovitch@mandriva.org> 0.17-1mdv2009.1
 + Revision: 338063
 - update to new version 0.17
 
